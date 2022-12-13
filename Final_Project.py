@@ -149,8 +149,8 @@ if submit:
 
     predictedclass = lr.predict(newdata)
     probs = lr.predict_proba(newdata)
-    st.write(f'debug marrage: {mymar}') 
-    st.write(f'Debug {income} {age} {educ} {gender} {mar_label} {parent}')
+    #st.write(f'debug marrage: {mymar}') 
+    #st.write(f'Debug {income} {age} {educ} {gender} {mar_label} {parent}')
     predict = "1-LinkedIn User" if predictedclass[0] ==1 else "0 - Not LinkedIn User"
     st.write(f"Predicted class: {predict}") 
     st.write(f"Probability that this person using Linkedin:", "{:.4f}".format(round(probs[0][1],4)))
