@@ -65,7 +65,7 @@ elif myincome == "Under 30K":
     income = 3
 elif myincome == "Under 40K":
     income = 4
-elif myincome == "Under 50K ":
+elif myincome == "Under 50K":
     income = 5
 elif myincome == "Under 75K":
     income = 6
@@ -116,13 +116,13 @@ if mymar == "Married":
      mar_label = 1
 elif mymar == "Living with a partner":
      mar_label = 2
-elif myeduc == "Divorced":
+elif mymar == "Divorced":
      mar_label = 3
-elif myeduc == "Separated":
+elif mymar == "Separated":
      mar_label = 4
-elif myeduc == "Widowed":
+elif mymar == "Widowed":
      mar_label = 5
-elif myeduc == "Never been married":
+elif mymar == "Never been married":
      mar_label= 6
 else:
     mar_label = 99
@@ -149,6 +149,7 @@ if submit:
 
     predictedclass = lr.predict(newdata)
     probs = lr.predict_proba(newdata)
+    st.write(f'debug marrage: {mymar}') 
     st.write(f'Debug {income} {age} {educ} {gender} {mar_label} {parent}')
     predict = "1-LinkedIn User" if predictedclass[0] ==1 else "0 - Not LinkedIn User"
     st.write(f"Predicted class: {predict}") 
